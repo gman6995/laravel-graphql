@@ -49,6 +49,6 @@
             }
         }
     },
-    "minimum-stability": "*"
+    "minimum-stability": "stable"
     
 }
