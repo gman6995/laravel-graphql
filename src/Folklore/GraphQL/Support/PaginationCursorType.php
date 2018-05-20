@@ -39,6 +39,18 @@ class PaginationCursorType extends ObjectType
                         return $paginator->hasPages();
                     },
                 ],
+                'hasMorePages' => [
+                    'type' => GraphQLType::nonNull(GraphQLType::boolean()),
+                    'resolve' => function (LengthAwarePaginator $paginator) {
+                        return $paginator->hasMorePages();
+                    },
+                ],
+                'hasPages' => [
+                    'type' => GraphQLType::nonNull(GraphQLType::boolean()),
+                    'resolve' => function (LengthAwarePaginator $paginator) {
+                        return $paginator->hasPages();
+                    },
+                ],
             ],
         ]);
     }
